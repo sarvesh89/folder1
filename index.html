@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name = "keywords" content="Popup" />
+<meta name = "description" content="Popup Form" />
+<title>PaisleyGrace - Popup - Form</title>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<div class="wrapper">
+  <section class="bg">
+    <button class="trigger">Click the Popup</button>
+    <div class="modal show-modal">     
+      <!--popup-->
+      <div class="modal-content"> <span class="close-button">×</span> 
+        <!--greenBox start-->
+        <div class="greenBox" id="emails">
+          <div id="email_heading">
+            <h1>THIS <span class="greenPatch">10% OFF</span></h1>
+            <h2>IS FOR <span>YOU!</span></h2>
+            <p>Subscribe to our newsletter to save on your first order and get the inside scoop on new arrivals & special deals.</p>
+          </div>
+          <!--email_heading end-->   
+          <div id="mobile_heading" style="display: none;">
+            <h1>PREFER <span class="greenPatch">TEXTING</span></h1>
+            <p>Get the best deals and updates from Paisley Grace Boutique via text.</p>
+          </div>
+          <!--mobile_heading end-->   
+          <form action="confirmation_popup.html"  onSubmit="return chekcPhone()" method="post">
+            <div id="email_body">
+              <div id="emailerror" class="error"><img src="images/error_icon.png" alt="error icon"><span>ENTER A VALID EMAIL ADDRESS</span></div>
+				
+              <input placeholder="Email Address"  id="email"  type="text" />
+              <input class="formBtn btn1" type="button" value="COUNT ME IN!" />
+            </div>
+            <!--email_body end-->
+			 
+            <div id="mobile_body" style="display: none;">
+               <div id="phoneError" class="error" style="display: none;"><img src="images/error_icon.png" alt="error icon"><span> Please enter a valid phone number</span></div>
+              <input placeholder="Phone Number"  id="phone"  type="text" />
+              <input class="formBtn btn2" type="submit" value="TEXT ME" />
+            </div>
+            <!--mobile_body end-->
+          </form>
+          <div id="email_footer">
+            <div class="nothanks"> <a href="#" target="_blank">No thanks</a></div>
+            <div class="tnc">Offer valid for new subscribers only. Exclusions may apply. <br>
+              View our <a href="#" target="_blank">Privacy Policy</a>.</div>
+          </div>
+          <!--email_footer end-->    
+          <div id="mobile_footer" style="display: none;">
+            <div class="nothanks"> <a href="#" target="_blank">No thanks, I'll skip the texts</a></div>
+            <div class="tnc">By subscribing to Paisley Grace Boutique text messaging, you agree to receive recurring autodialed marketing text messages to the mobile number used at opt-in. Consent is not a condition of purchase. Message frequency may vary. Msg & data rates may apply. Reply HELP for help and STOP to cancel. See <a href="#" target="_blank">Terms and Conditions</a> & <a href="#" target="_blank">Privacy Policy</a>.</div>
+          </div>
+          <!--email_footer end--> 
+        </div>
+        <!--greenBox end-->     
+      </div>
+      <!--popup end--> 
+    </div>
+  </section>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="js/popup.js" type="text/javascript"></script>
+</body>
+</html>

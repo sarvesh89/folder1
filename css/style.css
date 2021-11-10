@@ -1,0 +1,338 @@
+@charset "UTF-8";
+/* CSS Document */
+@import "https://fonts.googleapis.com/css?family=Raleway";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700;800&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Raleway;
+  font-size: 20px;
+}
+a {
+  color: #000000;
+}
+h1, h2, h3 {
+  margin: 0;
+}
+h1, h2, h3 {
+  font-size: 45px;
+  font-family: Raleway;
+  font-weight: 400;
+  color: #394B80;
+}
+.bg {
+  background: url("../images/bg.jpg")no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.trigger {
+  text-align: center;
+  padding: 10px 15px;
+  background: #fb7fbd;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  border: 2px solid #edde16;
+}
+/**Pop overlay**/
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+visibility: hidden;
+  transform: scale(1.01);
+  transition: visibility 0s linear 0.15s, opacity 0.15s 0s, transform 0.15s;
+}
+.modal-content {
+  position: absolute;
+  padding: 2.5em;
+  width: 600px;
+  height: 600px;
+  text-align: center;
+  background: url("../images/pop_design.png") no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  background-position: center;
+}
+.close-button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 200;
+  right: 58px;
+  top: 38px;
+  color: #394B80;
+  text-decoration: none;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.15s 0s, transform 0.15s;
+}
+/**greenBox**/
+.greenBox {
+  position: relative;
+  max-width: 500px;
+  height: 500px;
+  background: #BCE9DE;
+  padding: 38px 35px;
+  border: 3px solid #FA9DE6;
+}
+.greenBox h1 span.greenPatch {
+  background: url("../images/pink_patch.png") no-repeat;
+  width: 221px;
+  display: inline-block;
+  padding: 8px 8px 0;
+}
+.greenBox h1 span, h2 span {
+  font-weight: 700;
+}
+.greenBox h1 {
+  text-align: left;
+}
+.greenBox h2 {
+  text-align: right;
+}
+.greenBox p {
+  margin: 5px 0 15px;
+}
+.greenBox .nothanks {
+  font-size: 16px;
+  padding: 10px 0 15px;
+}
+.greenBox .tnc {
+  font-size: 14px;
+}
+
+/**blueBox**/
+.blueBox {
+  position: relative;
+  max-width: 500px;
+  height: 500px;
+  background: #61CFDD;
+  padding: 45px 10px;
+  border: 3px solid #394B80;
+}
+.blueBox form{width:90%; margin: 0 auto;}
+.blueBox .formBtn {
+    width: 116px;
+}
+.blueBox h1 span.greenPatch {
+  background: url("../images/green_patch.png") no-repeat;
+  width: 221px;
+  display: inline-block;
+  padding: 8px 8px 0;
+}
+.blueBox h1 span, h2 span {
+  font-weight: 700;
+}
+.blueBox h1 {
+  text-align: center;
+}
+.blueBox h2 {
+  text-align: right;
+}
+.blueBox p {
+  margin: 10px 0 15px;
+	    padding: 0 65px;
+}
+.blueBox .nothanks {
+  font-size: 16px;
+  padding: 10px 0 25px;
+}
+.blueBox .tnc {
+  font-size: 14px;
+}
+/**pinkBox**/
+.pinkBox {
+  position: relative;
+  max-width: 500px;
+  height: 500px;
+  background: #FA9DE6;
+  padding: 80px 30px;
+  border: 3px solid #394B80;
+}
+.pinkBox .greenPatch {
+  background: url("../images/blue_patch.png") no-repeat;
+  display: inline-block;
+  background-position: 52px 15px;
+}
+.pinkBox h1 span, h2 span, h3 span {
+  font-weight: 700;
+}
+.pinkBox h1, .pinkBox h2, .pinkBox h3 {
+  text-align: center;
+}
+.pinkBox p {
+  padding: 0 15px;
+}
+.pinkBox p span {
+  font-weight: 700;
+}
+.backBtn {
+  width: 210px;
+  display: inline-block;
+  background: transparent;
+  color: #394B80;
+  font-size: 18px;
+  height: 48px;
+  border: solid 3px #394B80;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+.backBtn:hover {
+  background: #394B80;
+  color: #fff;
+}
+/**FOorm**/
+input, textarea {
+  margin: 8px auto;
+  font-family: inherit;
+  font-size: inherit;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border: solid 3px #394B80;
+  color: #495057;
+  background: #bce9de;
+}
+form #emailerror {
+  display: none;
+
+}
+
+form .error {
+  font-size: 16px;
+  font-weight: bold;
+  color: #394B80;
+}
+form .error span {
+  padding: 0 5px;
+}
+.formBtn {
+  width: 162px;
+  display: inline-block;
+  background: transparent;
+  color: #394B80;
+  font-size: 18px;
+  height: 48px;
+  border: solid 3px #394B80;
+  font-weight: 400;
+  cursor: pointer;
+}
+.formBtn:hover {
+  background: #394B80;
+  color: #fff;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #495057;
+  opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #495057;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #495057;
+}
+@media screen and (max-width: 767px) {
+  h1, h2 {
+    font-size: 33px;
+  }
+  .greenBox h1, .greenBox h2 {
+    text-align: center;
+  }
+  .modal-content {
+    background: url("../images/pop_design_mobile.jpg") no-repeat;
+    padding: 0;
+    width: 320px;
+    height: 520px;
+    border: none;
+  }
+  .greenBox {
+    max-width: 100%;
+    height: 100%;
+    background: transparent;
+    padding: 38px 10px;
+    border: none;
+  }
+  .greenBox h1 span.greenPatch {
+    width: 150px;
+    display: inline-block;
+    padding: 5px 5px 0;
+    background-size: 100%;
+  }
+  .greenBox p {
+    margin: 15px 0 15px;
+  }
+  .close-button {
+    right: 8px;
+    top: -12px;
+  }
+/**blueBox**/
+	
+.blueBox {
+    background: transparent;
+    padding: 35px 10px;
+    border: none;
+}	
+.blueBox h1 span.greenPatch {
+    padding: 0px 8px 0;
+    background-position: 8px -15px;
+}
+.blueBox p {
+    padding: 0 10px;
+}
+.blueBox form {
+    width: 100%;
+}
+.blueBox .tnc {
+    font-size: 11px;
+	padding: 0 10px;
+}
+.formBtn {
+    background: #394B80;
+    color: #fff;
+}
+  /**pinkBox**/
+  .pinkBox {
+    padding: 110px 0;
+    background: transparent;
+    border: none;
+  }
+  .pinkBox h1, .pinkBox h2, .pinkBox h3 {
+    font-size: 26px;
+  }
+  .pinkBox .greenPatch {
+    background-position: 10px 0px;
+    background-size: 100%;
+  }
+  .backBtn {
+    background: #394B80;
+    color: #fff;
+  }
+
+}
